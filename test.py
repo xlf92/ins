@@ -21,7 +21,7 @@ def main():
     image = prepare_image(image)
     model = torchvision.models.resnet50()
     model.fc = torch.nn.Linear(in_features=2048, out_features=1)
-    model.load_state_dict(torch.load('model-resnet-50.pkl')) 
+    model.load_state_dict(torch.load('model//model-resnet-50.pkl')) 
     model.eval()
     with torch.no_grad():
         preds = model(image)
